@@ -1,0 +1,110 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.5;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #141414;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e50914;
+}
+
+.navbar .menu a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.navbar .menu a:hover {
+  color: #e50914;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('/maxresdefault.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content .btn {
+  margin: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hero-content .btn:hover {
+  background-color: #f40612;
+}
+
+/* Movies Section */
+.movies {
+  margin: 2rem;
+}
+
+.movies h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.movie-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; /* Makes rows responsive */
+}
+
+.movie-row img {
+  width: 150px; /* Uniform width */
+  height: 225px; /* Uniform height */
+  border-radius: 5px;
+  object-fit: cover; /* Ensures the image fills the box while maintaining aspect ratio */
+  transition: transform 0.3s ease;
+}
+
+.movie-row img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .movie-row img {
+    width: 120px;
+    height: 180px; /* Adjust height proportionally for smaller screens */
+  }
+}
